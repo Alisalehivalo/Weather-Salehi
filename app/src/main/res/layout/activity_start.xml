@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:gravity="center"
+    android:background="@drawable/bg_gradient2"
+    tools:context=".StartActivity">
+
+    <ir.airport.testweather.YekanTextview
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="سامانه هواشناسی"
+        android:textColor="#FFEB3B"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ir.airport.testweather.YekanTextview
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":برنامه نویس"
+        android:textColor="#C1E7F8"
+        android:layout_below="@id/txt1"
+        android:textSize="30sp"
+        android:id="@+id/txt2"/>
+
+    <ir.airport.testweather.YekanTextview
+        android:layout_below="@id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:text="علی اکبر صالحی"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+    <ProgressBar
+        android:id="@+id/progressBar_cyclic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:layout_marginTop="20dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
