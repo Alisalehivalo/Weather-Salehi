@@ -153,10 +153,10 @@
                     android:gravity="center" android:padding="8dp"
                     android:background="#3CF1EBF1">
                     <ImageView android:layout_width="25dp" android:layout_height="25dp"
-                        android:src="@drawable/visibility" android:tint="#FFFFFF"/>
+                        android:src="@drawable/wind" android:tint="#FFFFFF"/>
                     <Space android:layout_width="wrap_content" android:layout_height="5dp"/>
                     <ir.airport.testweather.YekanTextview android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:textSize="12dp" android:text="دید افقی"/>
+                        android:textSize="12dp" android:text="جهت باد"/>
                     <TextView android:id="@+id/about" android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:textSize="14dp"
                         android:text="A.Salehi"/>

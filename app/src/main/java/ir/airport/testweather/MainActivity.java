@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnF;
     TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt,
-            sunsetTxt, windTxt, pressureTxt, humidityTxt,Visibility;
+            sunsetTxt, windTxt, pressureTxt, humidityTxt,Wind_deg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 windTxt = findViewById(R.id.wind);
                 pressureTxt = findViewById(R.id.pressure);
                 humidityTxt = findViewById(R.id.humidity);
-                Visibility=findViewById(R.id.about);
+                Wind_deg=findViewById(R.id.about);
 
 
 
@@ -109,24 +109,24 @@ public class MainActivity extends AppCompatActivity {
                 Long updatedAt = jsonObj.getLong("dt");
                 String updatedAtText = "بروزرسانی: " + new SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(new Date(updatedAt * 1000));
                 String temp = main.getString("temp") + "°C";
-                String tempMin = "کمینه دما: " + main.getString("temp_min") + "°C";
-                String tempMax = "بیشینه دما: " + main.getString("temp_max") + "°C";
-                String pressure = main.getString("pressure")+"hpa";
+                String tempMin = "کمینه دما: " + main.getString("temp_min");
+                String tempMax = "بیشینه دما: "+ main.getString("temp_max");
+                String pressure = main.getString("pressure")+" hpa";
                 String humidity = main.getString("humidity")+"%";
-                String visibility=jsonObj.getString("visibility")+"m";
-
                 Long sunrise = sys.getLong("sunrise");
                 Long sunset = sys.getLong("sunset");
                 String windSpeed = wind.getString("speed");
+                String winddegree = wind.getString("deg")+"°";
                 String weatherDescription = weather.getString("description");
-
                 String address = jsonObj.getString("name") + ", " + sys.getString("country");
                 Log.d("m",address);
 
 
+
+
                 /* Populating extracted data into our views */
                 addressTxt.setText(address);
-                Visibility.setText(visibility);
+                Wind_deg.setText(winddegree);
                 updated_atTxt.setText(updatedAtText);
                 statusTxt.setText(weatherDescription.toUpperCase());
                 tempTxt.setText(temp);
