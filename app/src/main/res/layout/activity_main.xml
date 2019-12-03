@@ -13,27 +13,44 @@
     <RelativeLayout android:id="@+id/mainContainer" android:layout_width="match_parent"
         android:layout_height="match_parent" android:visibility="visible">
         <LinearLayout android:id="@+id/addressContainer" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/btnF"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/round_button"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="هفته آینده"
-                android:textStyle="bold"
-                android:layout_gravity="right"
-                android:textColor="#fff" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_button"
+                    android:text="پروفایل"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnF"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+
+                    android:background="@drawable/round_button"
+                    android:text="هفته آینده"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
 
 
+            </LinearLayout>
 
-
-
-
-            <TextView android:id="@+id/address" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:textSize="24dp"
+            <TextView android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
                 android:text="TEHRAN, IR"/>
             <ir.airport.testweather.YekanTextview android:id="@+id/updated_at" android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:textSize="14dp"

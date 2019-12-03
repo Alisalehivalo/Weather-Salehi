@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    Button btnF;
+    Button btnF,btnProfile;
     TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt,
             sunsetTxt, windTxt, pressureTxt, humidityTxt,Wind_deg;
 
@@ -38,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnF=findViewById(R.id.btnF);
+        btnProfile=findViewById(R.id.btnProfile);
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity.this,ProfileActivity.class);
+                startActivity(i);
+
+            }
+        });
 
 
                 addressTxt = findViewById(R.id.address);
@@ -111,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 String temp = main.getString("temp") + "°C";
                 String tempMin = "کمینه دما: " + main.getString("temp_min");
                 String tempMax = "بیشینه دما: "+ main.getString("temp_max");
-                String pressure = main.getString("pressure")+" hpa";
+                String pressure = main.getString("pressure")+" 1qhpa";
                 String humidity = main.getString("humidity")+"%";
                 Long sunrise = sys.getLong("sunrise");
                 Long sunset = sys.getLong("sunset");

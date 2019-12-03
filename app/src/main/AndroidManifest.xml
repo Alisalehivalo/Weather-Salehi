@@ -11,13 +11,25 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CityListActivity"
+        <activity android:name=".ProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme"></activity>
         <activity
+            android:name=".ForgetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".CityListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
             android:name=".CityActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomTheme"></activity>
+            android:theme="@style/CustomTheme" />
         <activity android:name=".NextDaysActivity" />
         <activity
             android:name=".ForecastActivity"

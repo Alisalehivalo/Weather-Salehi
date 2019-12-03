@@ -21,7 +21,7 @@ public class StartActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(StartActivity.this, CityListActivity.class);
+                Intent i = new Intent(StartActivity.this, RegisterActivity.class);
                 startActivity(i);
                 finish();
             }

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@drawable/bg_gradient"
+    tools:context=".ProfileActivity">
+
+    <ir.airport.testweather.YekanTextview
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="پروفایل کاربری"
+    android:textSize="35sp"
+    android:textStyle="bold"
+    android:textColor="#EED70A"/>
+        <EditText
+            android:id="@+id/old_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="ایمیل جاری خود را وارد نمایید"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColorHint="#FFF"
+            android:textColor="#fff"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/new_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#FFF"
+            android:textColor="#fff"
+            android:hint="ایمیل جدید خود را وارد نمایید"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/old_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:hint="رمز عبور جاری خود را وارد نمایید"
+            android:textColorHint="#FFF"
+            android:textColor="#fff"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/newPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:hint="رمز عبور جدید خود را وارد نمایید"
+            android:textColorHint="#FFF"
+            android:textColor="#fff"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:singleLine="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/change_email_button"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button"
+            android:textColor="@android:color/white"
+            android:text="تغییر ایمیل"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/change_password_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button"
+            android:text="تغییر رمز کاربری"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/sending_pass_reset_button"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button"
+            android:text="ارسال ایمیل ریست رمز عبور"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/remove_user_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button"
+            android:text="حذف حساب کاربری"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/sign_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button"
+            android:text="خارج شدن از حساب کاربری"
+
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
