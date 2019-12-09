@@ -8,6 +8,7 @@
     android:padding="25dp"
     android:gravity="center"
     android:background="@drawable/bg_gradient2"
+
     tools:context=".StartActivity">
 
     <ir.airport.testweather.YekanTextview
@@ -52,6 +53,14 @@
         android:outlineSpotShadowColor="@color/colorPrimary"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_below="@id/progressBar_cyclic"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:src="@drawable/animated_android"
+        android:id="@+id/android"/>
 
 
 </RelativeLayout>

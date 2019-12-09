@@ -8,8 +8,14 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -17,7 +23,22 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+        final ImageView androidLogo = findViewById(R.id.android);
+        androidLogo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Drawable drawable = androidLogo.getDrawable();
+                if (drawable instanceof Animatable) {
+                    if (((Animatable) drawable).isRunning()) {
+                        ((Animatable) drawable).stop();
+                    } else {
+                        ((Animatable) drawable).start();
+                    }
+                }
+            }
+        });
+
         showNotification("اخطار","برای ورود به سامانه هواشناسی کلیک نمایید");
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -47,4 +68,11 @@ public class StartActivity extends AppCompatActivity {
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
     }
+
+
+
+
+
 }
+
+

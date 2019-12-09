@@ -158,10 +158,14 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mAuth.signOut();
+                Toast.makeText(ProfileActivity.this, "SignOut...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(ProfileActivity.this, RegisterActivity.class));
+                finish();
+
             }
         });
     }
-        
+
 
     }
 
