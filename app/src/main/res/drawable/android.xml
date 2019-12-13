@@ -5,7 +5,7 @@
     android:width="500px"
     android:height="500px">
     <group android:name="android">
-        
+
         <group android:name="head_eyes">
             <path
                 android:name="head"

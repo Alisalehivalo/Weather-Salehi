@@ -3,6 +3,7 @@
     package="ir.airport.testweather">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +12,13 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity"
+        <activity android:name=".AviationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme"></activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
         <activity
             android:name=".ForgetActivity"
             android:screenOrientation="portrait"
@@ -49,6 +54,10 @@
             android:name=".MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
     </application>
 
 </manifest>

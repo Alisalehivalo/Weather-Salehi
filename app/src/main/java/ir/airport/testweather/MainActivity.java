@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    Button btnF,btnProfile;
+    Button btnF,btnProfile,btnAviation;
     TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt,
             sunsetTxt, windTxt, pressureTxt, humidityTxt,Wind_deg;
 
@@ -36,39 +36,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        addressTxt = findViewById(R.id.address);
+        updated_atTxt = findViewById(R.id.updated_at);
+        statusTxt = findViewById(R.id.status);
+        tempTxt = findViewById(R.id.temp);
+        temp_minTxt = findViewById(R.id.temp_min);
+        temp_maxTxt = findViewById(R.id.temp_max);
+        sunriseTxt = findViewById(R.id.sunrise);
+        sunsetTxt = findViewById(R.id.sunset);
+        windTxt = findViewById(R.id.wind);
+        pressureTxt = findViewById(R.id.pressure);
+        humidityTxt = findViewById(R.id.humidity);
+        Wind_deg=findViewById(R.id.about);
         btnF=findViewById(R.id.btnF);
+        btnAviation=findViewById(R.id.btnAviation);
         btnProfile=findViewById(R.id.btnProfile);
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,ProfileActivity.class);
-                startActivity(i);
+        weatherTask weather=new weatherTask();
+        weather.execute();
 
-            }
-        });
-
-
-                addressTxt = findViewById(R.id.address);
-                updated_atTxt = findViewById(R.id.updated_at);
-                statusTxt = findViewById(R.id.status);
-                tempTxt = findViewById(R.id.temp);
-                temp_minTxt = findViewById(R.id.temp_min);
-                temp_maxTxt = findViewById(R.id.temp_max);
-                sunriseTxt = findViewById(R.id.sunrise);
-                sunsetTxt = findViewById(R.id.sunset);
-                windTxt = findViewById(R.id.wind);
-                pressureTxt = findViewById(R.id.pressure);
-                humidityTxt = findViewById(R.id.humidity);
-                Wind_deg=findViewById(R.id.about);
-
-
-
-
-                        weatherTask weather=new weatherTask();
-                        weather.execute();
-
-                btnF.setOnClickListener(new View.OnClickListener() {
+        btnF.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent i=new Intent(MainActivity.this,ForecastActivity.class);
@@ -78,6 +64,21 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(MainActivity.this,ProfileActivity.class);
+                startActivity(i);
+
+            }
+        });
+        btnAviation.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(MainActivity.this,AviationActivity.class);
+               startActivity(intent);
+           }
+        });
 
 
     }
