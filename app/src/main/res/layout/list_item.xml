@@ -7,17 +7,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"
         android:text="TextView"
         android:textColor="#FFF"
         android:id="@+id/station"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textColor="#FFF"
         android:text="TextView"
         android:layout_marginTop="5dp"
         android:id="@+id/raw"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#2196F3"/>
 
 </LinearLayout>

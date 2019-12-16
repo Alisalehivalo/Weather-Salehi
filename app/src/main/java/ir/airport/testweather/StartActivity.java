@@ -15,6 +15,8 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class StartActivity extends AppCompatActivity {
@@ -36,6 +38,7 @@ public class StartActivity extends AppCompatActivity {
                 }
             }
         });
+
 
         showNotification("اخطار","برای ورود به سامانه هواشناسی کلیک نمایید");
 
@@ -68,7 +71,12 @@ public class StartActivity extends AppCompatActivity {
         mBuilder.setContentIntent(pi);
         mNotificationManager.notify(0, mBuilder.build());
     }
-
+    public void fade(View view){
+        ImageView image = (ImageView)findViewById(R.id.android);
+        Animation animation1 =
+                AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade);
+        image.startAnimation(animation1);
+    }
 
 
 

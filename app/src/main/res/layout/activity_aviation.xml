@@ -10,14 +10,25 @@
     android:padding="25dp"
     android:background="@drawable/bg_gradient"
     tools:context=".AviationActivity">
+    <ir.airport.testweather.YekanTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="گزارشات هواشناسی هوانوردی"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFC107"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="لطفا 4 حرفی فرودگاه را وارد نمایید"
         android:textAlignment="center"
         android:textColorHint="#111111"
-        android:background="#FFF"
+        android:background="@drawable/bg_gradient1"
+        android:maxLength="4"
+        android:layout_marginBottom="5dp"
         android:id="@+id/Search"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

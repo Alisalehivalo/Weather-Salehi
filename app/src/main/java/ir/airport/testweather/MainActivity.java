@@ -1,5 +1,6 @@
 package ir.airport.testweather;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnF,btnProfile,btnAviation;
     TextView addressTxt, updated_atTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt,
             sunsetTxt, windTxt, pressureTxt, humidityTxt,Wind_deg;
+    View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent i=new Intent(MainActivity.this,ForecastActivity.class);
                         i.putExtra("City", City);
+                        //ActivityOptions options = ActivityOptions.makeScaleUpAnimation(view, 0,0, view.getWidth(), view.getHeight());
                         startActivity(i);
+
 
 
                     }

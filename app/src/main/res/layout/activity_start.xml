@@ -48,19 +48,20 @@
         android:layout_height="wrap_content"
         android:minHeight="50dp"
         android:minWidth="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/colorPrimary"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
     <ImageView
-        android:layout_below="@id/progressBar_cyclic"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@null"
-        android:src="@drawable/animated_android"
-        android:id="@+id/android"/>
+    android:layout_below="@id/progressBar_cyclic"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:contentDescription="@null"
+    android:src="@drawable/animated_android"
+    android:id="@+id/android"/>
+
 
 
 </RelativeLayout>

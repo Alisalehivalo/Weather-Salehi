@@ -47,7 +47,7 @@ public class AviationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String search_metar=search.getText().toString();
-                uri="https://aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&stationString="+search_metar+"&hoursBeforeNow=1";
+                uri="https://aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&stationString="+search_metar+"&hoursBeforeNow=2";
                 Log.d("URL",uri);
                 menuItems=new ArrayList<>();
                 new GetItems().execute();
@@ -58,7 +58,7 @@ public class AviationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String search_tafor=search.getText().toString();
-                uri="https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs&requestType=retrieve&format=xml&stationString="+search_tafor+"&hoursBeforeNow=5&timeType=issue&mostRecent=true";
+                uri="https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs&requestType=retrieve&format=xml&stationString="+search_tafor+"&hoursBeforeNow=8&timeType=issue&mostRecent=true";
                 menuItems=new ArrayList<>();
                 new GetItems1().execute();
 
